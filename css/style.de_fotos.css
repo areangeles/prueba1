@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+     margin: 0;
+     text-align: center;
+     
+      }
+ body {
+     background-color: black;
+ }
+ 
+ *{
+    padding: 0;
+     margin: 0;
+      }
+ body {
+     background-color: black;
+ }
+ .contenedor {
+    width: 100%;
+    height: auto;
+ }
+ .contenedor img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+ nav {
+    border-radius: 0;
+ }
+ nav ul {
+     background-color: #363434cb;
+     width: 100%;
+     list-style-type: none;
+     text-align: center;
+     flex-wrap: wrap;
+ }
+ nav li {
+     display: inline-flex;
+     justify-content: center;
+ }
+ nav a{
+     text-decoration: none;
+     color: white;
+     padding: 7px;
+     width: 200px;
+     display: block;
+     text-align: center;
+ }
+ nav li:hover{
+     background-color: rgb(88, 88, 88);
+ }
+
+ main {
+   
+     width: 80%;
+     margin: auto;
+     display: grid;
+     grid-template-columns: auto auto auto;
+     gap: 20px;
+ }
+ main img {
+    border-radius: 20%;
+     width: 270px;
+     height: 270px;
+     object-fit: cover;
+ }
+ main div {
+     margin-top: 30px;
+ }
+ footer {
+     margin-top: 50px;
+     border-radius: 0;
+ }
+
+ /* Media Queries para pantallas de tamaño medio (tabletas, pantallas medianas) */
+@media screen and (max-width: 1024px) {
+    nav a {
+        width: 150px; /* Ancho reducido de los enlaces */
+        padding: 5px;
+    }
+
+    main {
+        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr; /* Mantengo tres imágenes por fila */
+    }
+
+    main img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Media Queries para pantallas pequeñas (smartphones) */
+@media screen and (max-width: 768px) {
+    nav a {
+        width: 120px; /* Ancho de los enlaces ajustado */
+        padding: 5px;
+    }
+
+    main {
+        width: 90%;
+        grid-template-columns: 1fr 1fr; /* Dos imágenes por fila */
+    }
+
+    main img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (smartphones pequeños) */
+@media screen and (max-width: 480px) {
+    nav a {
+        width: 100%; /* Enlaces ocupan el 100% del ancho */
+        padding: 10px; /* Aumento el padding para mejor legibilidad */
+    }
+
+    main {
+        width: 100%; /* Utilizo todo el ancho disponible */
+        grid-template-columns: 1fr; /* Una sola columna de imágenes */
+    }
+
+    main img {
+        width: 150px; /* Reduzco las imágenes para pantallas pequeñas */
+        height: 150px;
+    }
+}
+
+/* Media Queries para pantallas ultra pequeñas (teléfonos muy pequeños, como algunos modelos de baja gama) */
+@media screen and (max-width: 320px) {
+    nav a {
+        width: 100%; /* Los enlaces ocupan todo el ancho disponible */
+        padding: 8px; /* Padding ajustado para mejor legibilidad */
+        font-size: 14px; /* Reducí el tamaño de fuente de los enlaces */
+    }
+
+    main {
+        width: 100%;
+        grid-template-columns: 1fr; /* Sólo una columna de imágenes */
+        gap: 10px; /* Menos espacio entre las imágenes */
+    }
+
+    main img {
+        width: 120px; /* Hago las imágenes aún más pequeñas */
+        height: 120px;
+    }
+}
+/* Media Queries para pantallas pequeñas y dispositivos móviles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: block; /* Cambia de flex a bloque en pantallas pequeñas */
+        text-align: center; /* Asegura que los elementos dentro del <ul> estén centrados */
+    }
+
+    nav li {
+        display: block; /* Apilan los elementos de la lista en una columna */
+        width: 100%; /* Los elementos ocupan todo el ancho del contenedor */
+        margin: 5px 0; /* Añade algo de espacio entre los elementos */
+    }
+
+    nav a {
+        width: auto; /* Ajusta el ancho de los enlaces a su contenido */
+        padding: 10px; /* Aumenta el padding para mejorar la legibilidad */
+        text-align: center; /* Asegura que el texto dentro de los enlaces esté centrado */
+    }
+}

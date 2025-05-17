@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+      }
+ body {
+     background-color: black;
+     margin: 0;
+ }
+ nav ul {
+     background-color: #363434cb;
+     width: 100%;
+     list-style-type: none;
+     text-align: center;
+     padding: 0;
+     margin: 0;
+ }
+ .contenedor {
+    width: 100%;
+    height: auto;
+ }
+ .contenedor img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+ nav li {
+     display: inline-flex;
+ }
+ nav a{
+     text-decoration: none;
+     color: white;
+     padding: 7px;
+     width: 200px;
+     display: block;
+ }
+ nav li:hover{
+     background-color: rgb(88, 88, 88);
+ }
+ .secciones p {
+     color: white;
+     text-align: center;
+     padding: 40px;
+     text-align: justify;
+ }
+ .secciones img {
+     width: 950px;
+     height: 450px;
+    
+     object-fit: cover;
+     margin-left: 20px;
+ }
+ footer {
+     width: 100%;
+     height: 100px;
+     background-color: black;
+     color:white;
+     margin-top: 40px;
+ }
+
+ /* Media Queries para pantallas más pequeñas (pantallas de tablet y móviles) */
+
+/* Pantallas medianas (tabletas y pantallas más pequeñas) */
+@media screen and (max-width: 1024px) {
+
+    /* Ajustamos la navegación para pantallas medianas */
+    nav ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px; /* Añadimos espacio entre los elementos */
+    }
+
+    nav a {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem; /* Ajustamos el tamaño de la fuente */
+        text-align: center;
+    }
+
+    /* Ajustamos el tamaño de la imagen */
+    .secciones img {
+        width: 80%; /* La imagen ocupa el 80% del ancho en pantallas medianas */
+        height: auto;
+        margin-left: 0; /* Eliminamos el margen izquierdo */
+        margin-bottom: 20px; /* Añadimos un margen abajo */
+    }
+
+    /* Ajustamos el tamaño de los párrafos */
+    .secciones p {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas pequeñas (móviles y dispositivos pequeños) */
+@media screen and (max-width: 768px) {
+
+    /* Ajustamos la navegación para pantallas pequeñas */
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Ajustamos el tamaño de las imágenes */
+    .secciones img {
+        width: 90%; /* Las imágenes ocupan el 90% del ancho */
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustamos el tamaño de los párrafos */
+    .secciones p {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles muy pequeños) */
+@media screen and (max-width: 480px) {
+
+    /* Ajustamos la navegación para pantallas muy pequeñas */
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Ajustamos el tamaño de las imágenes */
+    .secciones img {
+        width: 100%; /* Las imágenes ocupan el 100% del ancho */
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustamos el tamaño de los párrafos */
+    .secciones p {
+        padding: 10px;
+        font-size: 0.8rem; /* Reducimos un poco más el tamaño de fuente */
+    }
+}

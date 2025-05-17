@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+      }
+ body {
+     background-color: black;
+ }
+ .contenedor {
+    width: 100%;
+    height: auto;
+ }
+ .contenedor img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+ nav ul {
+     background-color: #363434cb;
+     width: 100%;
+     list-style-type: none;
+     text-align: center;
+     padding: 0;
+     margin: 0;
+ }
+ nav li {
+     display: inline-flex;
+ }
+ nav a{
+     text-decoration: none;
+     color: white;
+     padding: 7px;
+     width: 200px; 
+     display: block;
+ }
+ nav li:hover{
+     background-color: rgb(88, 88, 88);
+ }
+ /* Media Queries para hacer que se adapte en pantallas pequeñas */
+@media screen and (max-width: 1024px) {
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Los enlaces se apilan verticalmente */
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px; /* Espaciado entre los enlaces */
+    }
+
+    /* Asegura que no haya espacios vacíos a la derecha */
+    .contenedor img {
+        max-width: 100%; /* No debe exceder el ancho del contenedor */
+    }
+
+    nav a {
+        width: 100%; /* Los enlaces se expanden en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    /* Asegura que no haya espacios vacíos */
+    .contenedor img {
+        max-width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    /* Ajusta las imágenes para que no se desborden */
+    .contenedor img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 10px; /* Espaciado adecuado para pantallas pequeñas */
+    }
+}

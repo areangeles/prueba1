@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+      }
+      /*prueba*/
+ html, body {
+    height: 100%; /* Asegura que el body y html ocupen todo el alto de la pantalla */
+    overflow-x: hidden;
+     background-color: black;
+ }
+ body {
+     background-color: black;
+ }
+ .contenedor {
+    width: 100%;
+    height: auto;
+ }
+ .contenedor img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+ nav ul {
+     background-color: #363434cb;
+     width: 100%;
+     list-style-type: none;
+     text-align: center;
+ }
+ nav li {
+     display: inline-flex;
+ }
+ nav a{
+     text-decoration: none;
+     color: white;
+     padding: 7px;
+     width: 200px;
+ }
+ nav li:hover{
+     background-color: rgb(88, 88, 88);
+ }
+
+ main {
+     width: 80%;
+     margin: auto;
+     display: grid;
+     grid-template-columns: auto auto;
+ }
+ main img {
+     width: 270px;
+     height: 270px;
+     object-fit: cover;
+ }
+ main div {
+     margin-top: 30px;
+ }
+ footer {
+     margin-top: 50px;
+     border-radius: 0;
+ }
+
+ .row {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+.column {
+flex: 50%;
+padding: 10px;
+}
+iframe {
+width: 100%;
+height: 300px;
+}
+.videos {
+ display: flex;
+justify-content: center;
+margin-bottom: 20px;
+flex: 50%;
+padding: 10px;
+
+}
+
+
+/* Para pantallas de tabletas y menores */
+@media screen and (max-width: 1024px) {
+    /* Navegación: Apilar los elementos verticalmente */
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Los elementos de la navegación se apilan verticalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    nav li {
+        margin-bottom: 10px; /* Espaciado entre los enlaces */
+    }
+
+    /* Ajustes en el main para pantallas más pequeñas */
+    main {
+        width: 90%; /* El área principal ocupa el 90% del ancho */
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+    }
+
+    /* Imágenes en el main: cambiar tamaño */
+    main img {
+        width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+
+/* Para pantallas de smartphones y móviles más pequeños */
+@media screen and (max-width: 768px) {
+    /* Navegación: Ajustar los márgenes y alineación */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* El contenido principal pasa a una sola columna */
+    main {
+        width: 100%;
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    /* Imágenes en el main: Ajuste de tamaño */
+    main img {
+        width: 100%; /* Ocupa el 100% del ancho disponible */
+        height: auto;
+    }
+
+    /* Pie de página: Ajustar el espacio para móviles */
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Para pantallas aún más pequeñas, como móviles muy pequeños */
+@media screen and (max-width: 480px) {
+    /* Navegación: Asegurarse de que esté centrado y sin márgenes extra */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav li {
+        margin-bottom: 5px;
+    }
+
+    /* Imágenes en el main: Ocupan el 100% del ancho */
+    main img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Pie de página: Para que no ocupe mucho espacio */
+    footer {
+        padding: 5px;
+    }
+}

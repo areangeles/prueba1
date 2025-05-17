@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+     margin: 0;
+      }
+ body {
+     background-color: black;
+ }
+
+ /*css del index*/
+
+ .contenedor {
+    width: 100%;
+    height: auto;
+ }
+ .contenedor img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+ nav ul {
+     background-color: #363434cb;
+     width: 100%;
+     list-style-type: none;
+     text-align: center;
+     
+ }
+ nav li {
+     display: inline-flex;
+     
+ }
+ nav a{
+     text-decoration: none;
+     color: white;
+     padding: 10px;
+     width: 250px;
+ }
+ nav li:hover{
+     background-color: rgb(88, 88, 88);
+ }
+  
+ .secciones {
+     display: flex;
+     padding: 40px;
+     align-items: center;
+     text-align: justify;
+ }
+ .secciones h3 {
+     color: rgb(94, 3, 3);
+     text-align: center;
+     font-family: "M PLUS Rounded 1c", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+ }
+ .secciones p {
+     color: white;
+     text-align: center;
+     padding: 40px;
+ }
+ .secciones h1 {
+     color: rgb(133, 4, 4);
+     text-align: center;
+     padding: 10px;
+     
+ }
+ .secciones ul {
+     color: white;
+ }
+ .contenido {
+     display: flex;
+     margin: 60px;
+
+     font-family: "M PLUS Rounded 1c", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+ }
+ .contenedor {
+     object-fit: cover;
+ }
+ .secciones img {
+     width: 550px;
+     height: 450px;
+     border-radius: 15%;
+     object-fit: cover;
+     margin-left: 20px;
+ }
+
+
+ /* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 1024px) {
+    /* Adaptación de la navegación */
+    nav ul {
+        display: block; /* Los enlaces se apilan verticalmente */
+    }
+
+    nav li {
+        display: block;
+        width: 100%; /* Los enlaces ocupan todo el ancho */
+    }
+
+    nav a {
+        width: 100%; /* Los enlaces ocupan todo el ancho */
+        padding: 15px;
+        text-align: left; /* Alineamos el texto a la izquierda */
+    }
+
+    /* Secciones y contenido */
+    .secciones {
+        flex-direction: column; /* Apilamos los elementos verticalmente */
+        padding: 20px;
+    }
+
+    .secciones img {
+        width: 80%; /* Las imágenes ocupan menos ancho en pantallas pequeñas */
+        height: auto;
+        margin: 20px 0; /* Añadimos márgenes entre la imagen y el texto */
+    }
+
+    .contenido {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .secciones h1, .secciones h3, .secciones p {
+        font-size: 1.2rem; /* Reducimos el tamaño de los textos */
+        padding: 10px;
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (smartphones) */
+@media screen and (max-width: 768px) {
+    /* Adaptación de la navegación */
+    nav ul {
+        display: block;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px; /* Espaciado entre los enlaces */
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 1rem; /* Reducimos el tamaño de la fuente */
+        text-align: center; /* Centramos el texto de los enlaces */
+    }
+
+    /* Secciones y contenido */
+    .secciones {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .secciones img {
+        width: 90%; /* Las imágenes ocupan casi todo el ancho */
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .contenido {
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .secciones h1, .secciones h3, .secciones p {
+        font-size: 1rem; /* Aún más pequeño en pantallas pequeñas */
+        padding: 8px;
+    }
+}
+
+/* Media Queries para dispositivos más pequeños (por debajo de 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajustamos la navegación para pantallas muy pequeñas */
+    nav a {
+        padding: 10px;
+        font-size: 0.9rem; /* Reducimos aún más el tamaño de la fuente */
+    }
+
+    .secciones h1, .secciones h3, .secciones p {
+        font-size: 0.9rem; /* Ajustamos aún más el tamaño de los textos */
+    }
+
+    .secciones img {
+        width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+        margin: 10px 0;
+    }
+
+    .contenido {
+        flex-direction: column;
+        margin: 10px;
+    }
+}
+
+ 
